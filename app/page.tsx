@@ -3,7 +3,7 @@ import HeroPage from "./components/hero-section/page";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <HeroPage/>
     </div>
   );
