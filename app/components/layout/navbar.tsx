@@ -35,8 +35,22 @@ const Navbar = () => {
             </div>
 
               <div className='flex gap-3 text-pink-700 text-3xl'>
-              <IoIosHeartEmpty/>
-              <IoBagOutline/>
+                <div className="relative flex items-center">
+                <IoIosHeartEmpty className="text-3xl cursor-pointer hover:text-red-500 transition-colors" />
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full px-1 py-0.5 shadow-lg">
+                  1
+                </span>
+                </div>
+
+                      <div className="relative flex items-center">
+                <IoBagOutline className="text-3xl cursor-pointer hover:text-red-500 transition-colors" />
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full px-1 py-0.5 shadow-lg">
+                  1
+                </span>
+                </div>
+
+
+              
             </div>
           
 
@@ -46,16 +60,18 @@ const Navbar = () => {
       <hr className='text-gray-400'/>
       {/*  */}
 
-      <div className='flex lg:hidden'>
+      <div className='flex lg:hidden px-5 p- gap-3 items-center'>
 
-      <div className='lg:hidden flex text-3xl'>
+      <div className='lg:hidden flex text-2xl '>
           <CiMenuBurger/>
           
         </div>
         <div className='flex items-center'>
-          <div className='bg-gray-400 h-3 w-1'></div>
-        <input type="text" placeholder='Search' />
+          <div className='bg-gray-400 h-14 w-[2px]'></div>
+        <input type="text" placeholder='Search' className='py-2 px-1 w-[280px] outline-none' />
         </div>
+
+        <IoIosSearch className='text-2xl'/>
       </div>
 
     </div>

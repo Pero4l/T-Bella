@@ -35,7 +35,7 @@ const Footer = () => {
           </div>
           <div className="col-span-1 p-5 flex flex-col lg:text-left text-center">
             <h2 className="text-2xl font-bold">Quick links</h2>
-            <ul className="lg:mt-5 mt-2 list-none flex flex-col gap-y-5 text-stone-400 font-light text-lg">
+            <ul className="lg:mt-5 mt-2 list-none flex flex-col gap-y-5 text-stone-200 font-light text-lg">
               <li className="group relative">
                 Terms & Conditions
                 <span className="bg-gradient-to-r from-white to-stone-500 absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 ease-out group-hover:w-full"></span>
@@ -62,7 +62,7 @@ const Footer = () => {
             <h2 className="text-2xl font-bold lg:text-left text-center">
               Connect with us
             </h2>
-            <p className="w-full text-center lg:text-left leading-snug text-lg font-light font-sans text-stone-400 pt-4">
+            <p className="w-full text-center lg:text-left leading-snug text-lg font-light font-sans text-stone-200 pt-4">
               Suscribe to out Newsletter to be the first to{" "}
               <br className="hidden lg:block" /> be aware of recent production
               and other <br className="hidden lg:block" />
