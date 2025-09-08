@@ -1,13 +1,21 @@
+'use client'
 import React from 'react'
+import { useState } from 'react';
 import { CiMenuBurger } from "react-icons/ci";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { IoBagOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
+import { MdClose } from "react-icons/md";
 
 const Navbar = () => {
+
+  const [isClick, setIsClick] = useState(false)
+
+
+
   return (
-    <div>
-      <nav className='flex justify-between items-center lg:p-10 p-5 lg:px-32'>
+    <div className='sticky top-0 z-10 w-full bg-white'>
+      <nav className='flex justify-between items-center lg:p-7 p-5 lg:px-32'>
 
         
         {/*  */}
@@ -62,8 +70,8 @@ const Navbar = () => {
 
       <div className='flex lg:hidden px-5 p- gap-3 items-center'>
 
-      <div className='lg:hidden flex text-2xl '>
-          <CiMenuBurger/>
+      <div onClick={()=> setIsClick(!isClick)} className='lg:hidden flex text-2xl '>
+          {isClick ? <MdClose/> : <CiMenuBurger/>}
           
         </div>
         <div className='flex items-center'>
@@ -73,6 +81,22 @@ const Navbar = () => {
 
         <IoIosSearch className='text-2xl'/>
       </div>
+
+     {/*  */}
+
+        <div className={isClick ? 'bg-pink-100 py-7 text-center' : 'hidden'}>
+          <ul className={isClick ? 'lg:hidden flex flex-col gap-5 ' : 'hidden'}>
+                <li className='cursor-pointer hover:text-black text-pink-600'>Home</li>
+                <li className='cursor-pointer hover:text-pink-600'>About</li>
+                <li className='cursor-pointer hover:text-pink-600'>Shop</li>
+                <li className='cursor-pointer hover:text-pink-600'>Latest products</li>
+              </ul>
+
+          <div className={isClick ? 'pt-10' : 'hidden'}>
+            <p>Follow us on our </p>
+          </div>
+
+        </div>
 
     </div>
   )
