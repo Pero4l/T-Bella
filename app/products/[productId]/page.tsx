@@ -15,10 +15,10 @@ import Image from 'next/image';
 
 
 const ProductDetails = () => {
-  const { id } = useParams();
 
- 
-  const product = Dummy.find(item => String(item.id) === id);
+const { productId } = useParams();
+const product = Dummy.find(item => String(item.id) === productId);
+
 
   if (!product) {
     return <div className="text-center text-red-500 mt-10">Product not found</div>;
@@ -91,7 +91,10 @@ const addToCart = () => {
   <Image
     src={images[currentIndex]}
     alt={`Product image ${currentIndex + 1}`}
+     width={100}   
+  height={100}
     className="object-cover rounded-md w-full max-h-[500px]"
+    unoptimized
   />
   {/* Prev Button */}
   <button
@@ -120,7 +123,7 @@ const addToCart = () => {
                               <TfiLocationPin className='text-sm' />
                               <p className='text-xs lg:text-sm'>{product.location}</p>
                             </div>
-          <div className="flex items-center gap-2 text-sm text-gray-800 bg-green-100 border px-2 py-1 w-fit rounded">
+          <div className="flex items-center gap-2 text-sm text-gray-800 bg-pink-100 border px-2 py-1 w-fit rounded">
             🚚 Delivery fee
             <span className="bg-gray-900 px-1 py-1 rounded text-xs text-gray-100">₦1,500</span>
           </div>
@@ -181,16 +184,16 @@ const addToCart = () => {
           
 
           <div className="flex flex-col gap-3">
-            <button className="py-2 w-full sm:full border border-black rounded-md text-black font-medium">
+            <button className="py-2 w-full sm:full border border-pink-600 rounded-md text-pink-600 font-medium">
               Buy Now
             </button>
-            <button onClick={addToCart} className={addCart ? "py-3 bg-green-600 text-white rounded-md font-medium w-full sm:w-full" : "py-3 bg-black text-white rounded-md font-medium w-full sm:w-full"}>
+            <button onClick={addToCart} className={addCart ? "py-3 bg-green-600 text-white rounded-md font-medium w-full sm:w-full" : "py-3 bg-pink-600 text-white rounded-md font-medium w-full sm:w-full"}>
               {addCart ? 'Added' : 'Add to cart'}
             </button>
           </div>
 
           <div className="relative mt-4">
-            <select className="w-full border border-green-700 outline-none rounded-md px-4 py-3 text-green-700">
+            <select className="w-full border border-black outline-none rounded-md px-4 py-3 text-pink-700">
               <option>Select your location</option>
               <option>Lagos</option>
               <option>Plateau</option>
@@ -206,9 +209,12 @@ const addToCart = () => {
             <div className='flex gap-3 pt-3'>
   {images.slice(1).map((img, idx) => (
     <Image
+    unoptimized
       key={idx}
       src={img}
       alt={`Image ${idx + 1}`}
+       width={500}   // required
+  height={500}
       className={`w-[72px] md:w-[120px] lg:w-24 h-auto rounded cursor-pointer border-2 ${
         currentIndex === idx + 1 ? 'border-black' : 'border-transparent'
       }`}
