@@ -76,7 +76,7 @@ const Navbar = () => {
         </div>
         <div className='flex items-center'>
           <div className='bg-gray-400 h-14 w-[2px]'></div>
-        <input type="text" placeholder='Search' className='py-2 px-1 w-[280px] outline-none' />
+        <input type="text" placeholder='Search' className='py-2 px-1 w-[280px] md:w-[680px] outline-none' />
         </div>
 
         <IoIosSearch className='text-2xl'/>

@@ -14,8 +14,8 @@ const HeroPage = () => {
       </div>
 
       <div className='text-center flex gap-5 justify-center lg:justify-start px-5 lg:px-5 mt-3'>
-        <button className='border-1 py-3 w-full text-pink-600 font-medium lg:w-fit lg:px-7 border-pink-600 rounded-xl'>Book Section</button>
-        <button className='bg-pink-600 text-white py-3 w-full lg:w-fit lg:px-12 rounded-xl font-medium'>Shop Now</button>
+        <button className='border-1 py-3 w-full text-pink-600 font-medium lg:w-fit lg:px-7 border-pink-600 hover:bg-pink-600 hover:text-white rounded-xl'>Book Section</button>
+        <button className='bg-pink-600 text-white py-3 w-full lg:w-fit lg:px-12 rounded-xl font-medium hover:bg-pink-300 hover:text-pink-600'>Shop Now</button>
       </div>
       </div>
 
