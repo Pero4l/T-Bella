@@ -73,40 +73,35 @@ const Navbar = () => {
       <hr className='text-gray-400'/>
       {/*  */}
 
-      <div className='flex lg:hidden px-5 p- gap-3 items-center'>
-
-      <div onClick={()=> setIsClick(!isClick)} className='lg:hidden flex text-2xl '>
-          {isClick ? <MdClose/> : <CiMenuBurger/>}
-          
+      <div className='flex lg:hidden px-5 gap-3 items-center'>
+        <div onClick={() => setIsClick(!isClick)} className='lg:hidden flex text-2xl'>
+          {isClick ? <MdClose /> : <CiMenuBurger />}
         </div>
         <div className='flex items-center'>
           <div className='bg-gray-400 h-14 w-[2px]'></div>
-        <input type="text" placeholder='Search' className='py-2 px-1 w-[280px] md:w-[680px] outline-none' />
+          <input type="text" placeholder='Search' className='py-2 px-1 w-[280px] md:w-[680px] outline-none' />
         </div>
-
-        <IoIosSearch className='text-2xl'/>
+        <IoIosSearch className='text-2xl' />
       </div>
 
-     {/*  */}
+      {/*  */}
 
-        <div className={isClick ? 'bg-pink-100 py-7 text-center' : 'hidden'}>
-          <ul className={isClick ? 'lg:hidden flex flex-col gap-5 ' : 'hidden'}>
-                  <Link href="/">
-                  <li className='cursor-pointer hover:text-black text-pink-600'>Home</li>
-                </Link>
-                <li className='cursor-pointer hover:text-pink-600'>About</li>
-                <Link href="/products">
-                  <li className='cursor-pointer hover:text-pink-600'>Shop</li>
-                </Link>
-                <li className='cursor-pointer hover:text-pink-600'>Latest products</li>
-               
-              </ul>
+      <div className={isClick ? 'bg-pink-100 py-7 text-center' : 'hidden'}>
+        <ul className={isClick ? 'lg:hidden flex flex-col gap-5 ' : 'hidden'}>
+          <Link href="/" onClick={() => setIsClick(false)}>
+        <li className='cursor-pointer hover:text-black text-pink-600'>Home</li>
+          </Link>
+          <li className='cursor-pointer hover:text-pink-600' onClick={() => setIsClick(false)}>About</li>
+          <Link href="/products" onClick={() => setIsClick(false)}>
+        <li className='cursor-pointer hover:text-pink-600'>Shop</li>
+          </Link>
+          <li className='cursor-pointer hover:text-pink-600' onClick={() => setIsClick(false)}>Latest products</li>
+        </ul>
 
-          <div className={isClick ? 'pt-10' : 'hidden'}>
-            <p className='text-2xl font-semibold'>Follow us on our social media @T_Bella </p>
-          </div>
-
+        <div className={isClick ? 'pt-10' : 'hidden'}>
+          <p className='text-2xl font-semibold'>Follow us on our social media @T_Bella </p>
         </div>
+      </div>
 
     </div>
   )
