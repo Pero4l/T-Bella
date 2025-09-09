@@ -17,7 +17,7 @@ const LatestHairPage = () => {
   const data = Dummy.slice(0, 4);
 
   return (
-    <div className="p-5 mt-10">
+    <div className="p-5 mt-10 lg:px-32">
       <h1 className="text-2xl font-medium">Latest Hairs</h1>
 
       <div className="grid grid-cols-2 gap-6 mt-4">
@@ -48,7 +48,7 @@ const LatestHairPage = () => {
               alt={hair.name}
               width={200}
               height={200}
-              className="object-cover rounded"
+              className="object-cover rounded md:w-[400px] lg:h-[700px] lg:w-[900px]"
                unoptimized
             />
             <h2 className="text-lg font-semibold">{hair.name}</h2>
@@ -73,7 +73,7 @@ const LatestHairPage = () => {
 
 
         <div className="mt-12">
-                  <button className='border-1 py-3 w-full text-pink-600 font-medium lg:w-fit lg:px-7 border-pink-600 hover:bg-pink-600 hover:text-white rounded-xl flex text-center justify-center items-center gap-3'>See All <span><FiPlus className="text-2xl "/></span></button>
+                  <button className='border-1 py-3 w-full text-pink-600 font-medium lg:w-fit lg:px-88 border-pink-600 hover:bg-pink-600 hover:text-white rounded-xl flex text-center justify-center items-center gap-3'>See All <span><FiPlus className="text-2xl "/></span></button>
         </div>
 
 
