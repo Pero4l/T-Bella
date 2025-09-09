@@ -10,16 +10,16 @@ import Link from "next/link";
 
 
 
-const LatestHairPage = () => {
+const ShopPage = () => {
 
   const [isClick, setIsClick] = useState<{ [key: number]: boolean }>({})
   const [isAdd, setIsAdd] = useState<{ [key: number]: boolean }>({})
 
-  const data = Dummy.slice(0, 4);
+  const data = Dummy;
 
   return (
     <div className="p-5 mt-10 lg:px-32">
-      <h1 className="text-2xl font-medium">Latest Hairs</h1>
+      <h1 className="text-2xl font-semibold">Avaliable Hairs</h1>
  
       <div className="grid grid-cols-2 gap-6 mt-4">
            {data.map((hair) => (
@@ -28,7 +28,7 @@ const LatestHairPage = () => {
 
            <div className="-mt-7 p-2">
              <div className="flex justify-between relative top-8 px-2">
-                <p className="bg-pink-200 rounded-full p-1 text-sm font-medium">New</p>
+                <p className=" rounded-full p-1 text-sm font-medium"></p>
 
                 <div
                   onClick={() =>
@@ -76,13 +76,13 @@ const LatestHairPage = () => {
       </div>
 
 
-        <div className="mt-12">
+        {/* <div className="mt-12">
                   <button className='border-1 py-3 w-full text-pink-600 font-medium lg:w-fit lg:px-88 border-pink-600 hover:bg-pink-600 hover:text-white rounded-xl flex text-center justify-center items-center gap-3'>See All <span><FiPlus className="text-2xl "/></span></button>
-        </div>
+        </div> */}
 
 
     </div>
   );
 };
 
-export default LatestHairPage;
+export default ShopPage;
