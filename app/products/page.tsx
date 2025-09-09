@@ -21,9 +21,9 @@ const ShopPage = () => {
     <div className="p-5 mt-10 lg:px-32">
       <h1 className="text-2xl font-semibold">Avaliable Hairs</h1>
  
-      <div className="grid grid-cols-2 gap-6 mt-4">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
            {data.map((hair) => (
-            <Link href={`/products/${hair.id}`} key={hair.id}>
+            
           <div key={hair.id} className="border-1 border-gray-200 rounded-md ">
 
            <div className="-mt-7 p-2">
@@ -45,14 +45,15 @@ const ShopPage = () => {
                   )}
                 </div>
             </div>
+            <Link href={`/products/${hair.id}`} key={hair.id}>
             <Image
               src={hair.image}
               alt={hair.name}
               width={200}
               height={200}
-              className="object-cover rounded md:w-[400px] lg:h-[700px] lg:w-[900px]"
+              className="object-cover rounded md:w-[400px] lg:h-[500px] lg:w-[900px]"
                unoptimized
-            />
+            /> </Link>
             <h2 className="text-lg font-semibold">{hair.name}</h2>
             <p className="text-sm pt-2">{hair.price}</p>
 
@@ -70,7 +71,7 @@ const ShopPage = () => {
             </div>
            </div>
           </div>
-          </Link>
+          
         ))}       
        
       </div>

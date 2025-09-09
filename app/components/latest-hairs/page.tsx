@@ -19,16 +19,16 @@ const LatestHairPage = () => {
 
   return (
     <div className="p-5 mt-10 lg:px-32">
-      <h1 className="text-2xl font-medium">Latest Hairs</h1>
+      <h1 className="text-2xl font-semibold">Latest Hairs</h1>
  
       <div className="grid grid-cols-2 gap-6 mt-4">
            {data.map((hair) => (
-            <Link href={`/products/${hair.id}`} key={hair.id}>
+           
           <div key={hair.id} className="border-1 border-gray-200 rounded-md ">
 
            <div className="-mt-7 p-2">
-             <div className="flex justify-between relative top-8 px-2">
-                <p className="bg-pink-200 rounded-full p-1 text-sm font-medium">New</p>
+             <div className="flex justify-between relative top-8 px-1">
+                <p className="bg-pink-200 rounded-full p-1 text-[10px] font-medium">New</p>
 
                 <div
                   onClick={() =>
@@ -45,6 +45,7 @@ const LatestHairPage = () => {
                   )}
                 </div>
             </div>
+             <Link href={`/products/${hair.id}`} key={hair.id}>
             <Image
               src={hair.image}
               alt={hair.name}
@@ -52,7 +53,7 @@ const LatestHairPage = () => {
               height={200}
               className="object-cover rounded md:w-[400px] lg:h-[700px] lg:w-[900px]"
                unoptimized
-            />
+            /></Link>
             <h2 className="text-lg font-semibold">{hair.name}</h2>
             <p className="text-sm pt-2">{hair.price}</p>
 
@@ -70,7 +71,7 @@ const LatestHairPage = () => {
             </div>
            </div>
           </div>
-          </Link>
+          
         ))}       
        
       </div>

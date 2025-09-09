@@ -6,6 +6,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { IoBagOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 import { MdClose } from "react-icons/md";
+import Link from 'next/link';
 
 const Navbar = () => {
 
@@ -27,9 +28,13 @@ const Navbar = () => {
 
             <div>
               <ul className='hidden lg:flex gap-10'>
-                <li className='cursor-pointer hover:text-pink-600'>Home</li>
+                <Link href="/">
+                  <li className='cursor-pointer hover:text-pink-600'>Home</li>
+                </Link>
                 <li className='cursor-pointer hover:text-pink-600'>About</li>
-                <li className='cursor-pointer hover:text-pink-600'>Shop</li>
+                <Link href="/products">
+                  <li className='cursor-pointer hover:text-pink-600'>Shop</li>
+                </Link>
                 <li className='cursor-pointer hover:text-pink-600'>Latest products</li>
               </ul>
             </div>
@@ -86,10 +91,15 @@ const Navbar = () => {
 
         <div className={isClick ? 'bg-pink-100 py-7 text-center' : 'hidden'}>
           <ul className={isClick ? 'lg:hidden flex flex-col gap-5 ' : 'hidden'}>
-                <li className='cursor-pointer hover:text-black text-pink-600'>Home</li>
+                  <Link href="/">
+                  <li className='cursor-pointer hover:text-black text-pink-600'>Home</li>
+                </Link>
                 <li className='cursor-pointer hover:text-pink-600'>About</li>
-                <li className='cursor-pointer hover:text-pink-600'>Shop</li>
+                <Link href="/products">
+                  <li className='cursor-pointer hover:text-pink-600'>Shop</li>
+                </Link>
                 <li className='cursor-pointer hover:text-pink-600'>Latest products</li>
+               
               </ul>
 
           <div className={isClick ? 'pt-10' : 'hidden'}>
