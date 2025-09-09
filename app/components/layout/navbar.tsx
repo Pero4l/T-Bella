@@ -103,7 +103,7 @@ const Navbar = () => {
               </ul>
 
           <div className={isClick ? 'pt-10' : 'hidden'}>
-            <p>Follow us on our </p>
+            <p className='text-2xl font-semibold'>Follow us on our social media @T_Bella </p>
           </div>
 
         </div>
